@@ -1,7 +1,7 @@
 {
-  "name": "my-task-list",
-  "short_name": "my-task-list",
-  "theme_color": "#EEDEB2",
+  "name": "My Task List",
+  "short_name": "My Task List",
+  "theme_color": "#2D8051",
   "background_color": "#2D8051",
   "display": "standalone",
   "scope": "./",

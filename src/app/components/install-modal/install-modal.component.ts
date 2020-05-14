@@ -17,7 +17,7 @@ export class InstallModalComponent implements OnInit {
     this.showInstallationModal = true;
   }
   installApp = () => {
-    this.closeInstallationModal();
+    this.closeInstallationModal(false);
     this.deferredPrompt.prompt();
     this.deferredPrompt.userChoice.then( (choiceResult) => {
       if (choiceResult.outcome === 'accepted') {
@@ -27,9 +27,11 @@ export class InstallModalComponent implements OnInit {
       }
     })
   }
-  closeInstallationModal = () => {
+  closeInstallationModal = (bool) => {
     this.showInstallationModal = false;
-    this.showInstallationReminder = true;
+    if (bool === true) {
+      this.showInstallationReminder = true;
+    }
   }
 
   closeReminderModal = () => {
