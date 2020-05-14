@@ -1,9 +1,10 @@
 {
-  "name": "to-do-app-v2",
-  "version": "0.0.0",
+  "name": "my-task-list",
+  "version": "2.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "startHttps" : "ng serve --ssl --ssl-key src/keys/localhost.key --ssl-cert src/keys/localhost.crt",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -19,6 +20,9 @@
     "@angular/platform-browser": "~9.1.6",
     "@angular/platform-browser-dynamic": "~9.1.6",
     "@angular/router": "~9.1.6",
+    "@angular/service-worker": "~9.1.6",
+    "animate.css": "^4.1.0",
+    "dayjs": "^1.8.26",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

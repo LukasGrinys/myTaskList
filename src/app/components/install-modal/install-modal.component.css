@@ -1,0 +1,98 @@
+
+.installation-modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    background: #000000d3;
+    z-index: 99;
+    flex-direction: column;
+}
+
+.installation-box {
+    width: 280px;
+    height: 210px;
+    background: #EEDEB2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    color: #0f0f0f;
+    flex-direction: column;
+}
+
+.modal-text-container {
+    width: 260px;
+    height: 50px;
+    text-align:center;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+.modal-button-container {
+    width: 260px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.modal-button {
+    width: 120px;
+    height: 45px;
+    border-radius: 4px;
+    background-color: #0f0f0f;
+    color: #EEDEB2;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+}
+.modal-button:hover {
+    background-color: #383838;
+}
+.button-red {
+    background-color: #9D3F34;
+}
+
+.installation-reminder-text-box {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 25px;
+}
+.reminder-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.install-icon-example {
+    width: 25px;
+    height: 25px;
+    padding: 3px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.installation-reminder-arrow {
+    animation: pointUp 1s ease-in-out infinite;
+}
+.install-icon-example > img {
+    width: 20px;
+    height: 20px;
+}
+.installation-reminder-text {
+    padding: 5px;
+    text-align:center;
+}
+@keyframes pointUp {
+    0% { 
+        transform: translateY(10px);
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% { 
+        transform: translateY(-5px); 
+        opacity: 0.2;
+    }
+}

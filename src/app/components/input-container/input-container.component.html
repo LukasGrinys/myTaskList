@@ -1,0 +1,6 @@
+  <div class="input-container">
+      <input type="text" placeholder="Tap to enter"  name="newTask" [(ngModel)]="newTask" #newTaskInput maxlength="50" (keyup.enter)="submitTask(); newTaskInput.value=''">
+      <div class="add-new-task centered" (click)="submitTask(); newTaskInput.value=''">
+          <i class="fas fa-plus"></i>
+      </div>
+  </div>

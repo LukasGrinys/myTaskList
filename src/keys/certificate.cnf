@@ -1,0 +1,21 @@
+[req]
+default_bits = 2048
+prompt = no
+default_md = sha256
+x509_extensions = v3_req
+distinguished_name = mytasklist
+
+[mytasklist]
+C = LT
+ST = Kaunas
+L = Kaunas
+O = Lukas Grinys    
+OU = Lukas Grinys Unit
+emailAddress = lukas.grinys@gmail.com
+CN = localhost
+
+[v3_req]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = localhost
