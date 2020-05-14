@@ -7,7 +7,6 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class InstallModalComponent implements OnInit {
   showInstallationModal: boolean = false;
-  showInstallationReminder: boolean = false;
   deferredPrompt: any;
   constructor() { }
   @HostListener('window:beforeinstallprompt', ['$event'])
@@ -17,7 +16,7 @@ export class InstallModalComponent implements OnInit {
     this.showInstallationModal = true;
   }
   installApp = () => {
-    this.closeInstallationModal(false);
+    this.closeInstallationModal();
     this.deferredPrompt.prompt();
     this.deferredPrompt.userChoice.then( (choiceResult) => {
       if (choiceResult.outcome === 'accepted') {
@@ -27,16 +26,10 @@ export class InstallModalComponent implements OnInit {
       }
     })
   }
-  closeInstallationModal = (bool) => {
+  closeInstallationModal = () => {
     this.showInstallationModal = false;
-    if (bool === true) {
-      this.showInstallationReminder = true;
-    }
   }
 
-  closeReminderModal = () => {
-    this.showInstallationReminder = false;
-  }
   ngOnInit(): void {
   }
 

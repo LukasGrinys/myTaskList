@@ -1,14 +1,14 @@
-<div>
+<!-- <div> -->
   <div *ngIf="showInstallationModal" class="installation-modal centered">
     <div class="installation-box centered">
       <div class="modal-text-container">Desktop app is available. Do you want to install it now?</div>
       <div class="modal-button-container">
         <div class="modal-button centered" (click)="installApp()">Yes</div>
-        <div class="modal-button button-red centered" (click)="closeInstallationModal(true)">Later</div>
+        <div class="modal-button button-red centered" (click)="closeInstallationModal()">Later</div>
       </div>
     </div>
   </div>
-
+<!-- 
   <div *ngIf="showInstallationReminder" class="installation-modal reminder-modal">
     <div class="installation-reminder-text-box">
       <div class="install-icon-example">
@@ -20,6 +20,6 @@
       <div class="installation-reminder-text">You can download the desktop app by clicking this icon</div>
       <div class="modal-button button-red centered" (click)="closeReminderModal()">Got it!</div>
     </div>
-  </div>
+  </div> -->
 
-</div>
+<!-- </div> -->

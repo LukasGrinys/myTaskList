@@ -14,11 +14,6 @@
   <app-install-modal></app-install-modal>
   
   <div class="container">
-    <div class="header centered">
-      <div class="install-button-container">
-        <img src="assets/install.png" alt="install"/>
-      </div>
-    </div>
     <div class="list-title" (click)="showListTitleModal()">
       <span *ngIf="listTitle.length < 10">{{listTitle}}</span>
       <span *ngIf="listTitle.length >= 10 && listTitle.length < 15" style="font-size: 4rem;">{{listTitle}}</span>
