@@ -5,7 +5,7 @@
     <div class="modal-input-box centered">
       <form name="listTitleForm" class="list-title-form">
         <div class="form-label">Name your list:</div>
-        <input type="text" name="listTitle" #listTitleInput [(ngModel)]="listTitle" maxLength="30">
+        <input type="text" name="listTitle" #listTitleInput [(ngModel)]="listTitle" maxLength="30" (keyup.enter)="closeListTitleModal(true)">
         <div class="button-save" (click)="closeListTitleModal(true)">Save</div>
       </form>
     </div>

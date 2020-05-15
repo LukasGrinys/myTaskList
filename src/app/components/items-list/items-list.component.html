@@ -1,11 +1,10 @@
-<div>
-
+<div class="items-and-input-container">
     <div class="list-of-items">
         <div class="list-of-items-top"></div>
         <div *ngFor="let task of tasks; let i = index">
             <div [className]="task.isBeingDeleted === false ? 'animate__animated animate__backInRight animate__faster' : 'animate__animated animate__fadeOutRight animate__fast'">
                 <div *ngIf="!task.completed" class="list-item-container">
-                    <div class="item-checkbox-container">
+                    <div class="item-checkbox-container centered">
                         <div *ngIf="renderTimeIcon(i)" class="clock-attribute centered">
                             <i class="far fa-clock"></i>
                         </div>
@@ -15,10 +14,10 @@
                         <div *ngIf="(task.task.length < 20)" class="list-item-text">
                             {{task.task}}
                         </div>
-                        <div *ngIf="(task.task.length >= 20 && 24 > task.task.length)" class="list-item-text" style="font-size:1.7rem">
+                        <div *ngIf="(task.task.length >= 20 && 24 > task.task.length)" class="list-item-text" style="font-size:1.5rem">
                             {{task.task}}
                         </div>
-                        <div *ngIf="(task.task.length >= 24)" class="list-item-text" style="font-size:1.25rem;letter-spacing:-1px">
+                        <div *ngIf="(task.task.length >= 24)" class="list-item-text" style="font-size:1.2rem;letter-spacing:-1px">
                             {{task.task}}
                         </div>
                         <div class="list-item-tooltip">
@@ -31,19 +30,20 @@
                 </div>
 
                 <div *ngIf="task.completed" class="list-item-container list-item-container-checked">
-                    <div class="item-checkbox-container">
+                    <div class="item-checkbox-container centered">
                         <input type="checkbox" checked (click)="checkItem(i)">
                     </div>
-                    <div *ngIf="(task.task.length < 20)" class="list-item-text">
-                        {{task.task}}
+                    <div class="text-container">
+                        <div *ngIf="(task.task.length < 20)" class="list-item-text">
+                            {{task.task}}
+                        </div>
+                        <div *ngIf="(task.task.length >= 20 && 24 > task.task.length)" class="list-item-text" style="font-size:1.5rem">
+                            {{task.task}}
+                        </div>
+                        <div *ngIf="(task.task.length >= 24)" class="list-item-text" style="font-size:1.2rem;letter-spacing:-1px">
+                            {{task.task}}
+                        </div>
                     </div>
-                    <div *ngIf="(task.task.length >= 20 && 24 > task.task.length)" class="list-item-text" style="font-size:1.7rem">
-                        {{task.task}}
-                    </div>
-                    <div *ngIf="(task.task.length >= 24)" class="list-item-text" style="font-size:1.25rem;letter-spacing:-1px">
-                        {{task.task}}
-                    </div>
-
                     <div class="remove-list-item centered" (click)="deleteItem(i)">
                         <i class="fas fa-trash-alt"></i>
                     </div>
@@ -53,5 +53,4 @@
         <div class="list-of-items-bottom"></div>
     </div>
     <app-input-container (addTask)="addTask($event)"></app-input-container>
-
 </div>

@@ -26,6 +26,9 @@ export class AppComponent {
   closeListTitleModal = (bool) => { 
     this.hideListTitleModal = true;
     if (bool === true) {
+      if (this.listTitle.trim().length === 0) {
+        this.listTitle = "My List";
+      };
       this.saveListTitle()
     } else {
       let savedTitle = localStorage.getItem('toDoListTitle');
