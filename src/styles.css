@@ -39,12 +39,12 @@
     text-align: center;
     overflow: hidden;
     cursor: pointer;
-    padding: 5px 15px;
+    padding: 5px 15px 10px;
 
   }
   .items-and-input-container {
     width: 100%;
-    min-height: 520px;
+    min-height: 420px;
     max-height: 780px;
     display: flex;
     flex-direction: column;
